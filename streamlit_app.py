@@ -20,9 +20,17 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 # ここに選択リストを置き、含めたい果物を選択できるようにしましょう。
 # Let's put a pick list here so they can pick the fruit they want to include 
 # 顧客が選択する果物に基づいてテーブル データをフィルタリングしたいので、顧客に例を示すためにリストを事前に設定します。 
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+# テーブルデータをフィルタリングする
+fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # ページにテーブルを表示します。
 # Display the table on the page.
-streamlit.dataframe(my_fruit_list)
+streamlit.dataframe(fruits_to_show)
+
+
+
+
+
+
 
