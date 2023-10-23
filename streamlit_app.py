@@ -15,6 +15,7 @@ import pandas
 # S3 バケットから CSV ファイルを読み取り
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 streamlit.dataframe(my_fruit_list)
+my_fruit_list = my_fruit_list.set_index('フルーツ')
 
 # ここに選択リストを置き、含めたい果物を選択できるようにしましょう。
 # Let's put a pick list here so they can pick the fruit they want to include 
