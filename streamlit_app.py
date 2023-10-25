@@ -34,7 +34,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 # Python パッケージ ライブラリを導入 リクエスト
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json)
+streamlit.text(fruityvice_response.json())
 
 
 
