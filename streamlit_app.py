@@ -30,6 +30,9 @@ streamlit.dataframe(fruits_to_show)
 
 #New Section to display fruityvice api response
 streamlit.header("Fruityvice Fruit Advice!")
+#テキスト入力ボックスを追加し、API 呼び出しの一部として入力を Fruityvice に送信します
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 
 # Python パッケージ ライブラリを導入 リクエスト
 import requests
