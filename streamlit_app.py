@@ -44,4 +44,5 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # 成形したjsonを表示
 streamlit.dataframe(fruityvice_normalized)
 
-
+#コネクタ パッケージが正常に追加されることを確認
+import snowflake.connector
