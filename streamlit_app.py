@@ -145,13 +145,11 @@ try:
   #テキスト入力ボックスを追加し、API 呼び出しの一部として入力を Fruityvice に送信します
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
   if not fruit_choice:
-      if not fruit_choice:
-          streamlit.error("Please select a fruit to get information.")
-      else:
-          streamlit.error("check")
-          back_from_function = get_fruityvice_data(fruit_choice)
-          # 成形したjsonを表示
-          streamlit.dataframe(back_from_function)
+      streamlit.error("Please select a fruit to get information.")
+  else:
+      back_from_function = get_fruityvice_data(fruit_choice)
+      # 成形したjsonを表示
+      streamlit.dataframe(back_from_function)
 except URLError as e:
     streamlit.error()
         
