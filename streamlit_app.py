@@ -151,6 +151,7 @@ try:
           back_from_function = get_fruityvice_data(fruit_choice)
           # 成形したjsonを表示
           streamlit.dataframe(fruityvice_normalized)
+          streamlit.error("kokomade.")
         
 except URLError as e:
     streamlit.error()
