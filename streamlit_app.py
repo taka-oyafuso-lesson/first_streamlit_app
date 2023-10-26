@@ -148,6 +148,7 @@ try:
       if not fruit_choice:
           streamlit.error("Please select a fruit to get information.")
       else:
+          streamlit.error("check")
           back_from_function = get_fruityvice_data(fruit_choice)
           # 成形したjsonを表示
           streamlit.dataframe(back_from_function)
